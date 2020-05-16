@@ -11,15 +11,6 @@
   
   <style>
   
-  .myForm {
-  min-width: 500px;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2.5rem
-}
   	.mynavhdr1 li{
 	
 	border-left:1px solid #504c4f;
@@ -49,7 +40,7 @@
 	  height:50%;
       min-height:50px;
   }
-  
+	  
  footer {
    position: fixed;
    left: 0;
@@ -78,60 +69,35 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-   	 <ul class="nav navbar-nav mynav navbar-right">
-         <li><a href="regform.php"><i class="fa fa-user-plus" style="color:red"></i>&nbsp;&nbsp;&nbsp;REGISTER</a></li>
-	       
+      <ul class="nav mynavhdr1 navbar-nav">
+        <li><a href="#" class="fa fa-twitter" style="color:white"></a></li>
+        <li><a href="#" class="fa fa-facebook" style="color:white"></a></li>
+        <li><a href="#" class="fa fa-google-plus" style="color:white"></a></li>
+        <li><a href="#" class="fa fa-pinterest" style="color:white"></a></li>
+        <li><a href="#" class="fa fa-instagram" style="color:white"></a></li>
+        <li><a href="#" class="fa fa-rss" style="color:white"></a></li>
        
       </ul>
    
+      <ul class="nav navbar-nav mynav navbar-right">
+        <li><a href="reservationform.php"><i class="fa fa-user-plus" style="color:red"></i>&nbsp;&nbsp;&nbsp;RACK</a></li>
+		<li><a href="index.html"><i class="glyphicon glyphicon-shopping-cart" style="color:red"></i>&nbsp;&nbsp;&nbsp;DESK</a></li>
+        <li><a href="index.html"><i class="fa fa-sign-in" style="color:red"></i>&nbsp;&nbsp;&nbsp;LOGIN</a></li>		
+       
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 </header>
 
-<nav class="navbar  ">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-	  <a class="navbar-brand"href="index.html" style="width:250px;height:80px;margin-left:40px;"><img src="images/reservation_tool.png" alt="Reservation Tool" style="width:200px;height:80px"></a>
-           
-
-   <div class = "container text-center">
-      <h1>Welcome to RDKB Rack Reservation Tool!</h1>
-	 
-     </div>		   
-		</div>
-             
-        
-    
-
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-
-
-<div class="col-md-6 col-md-offset-3 text-center">
-  <h2>Login</h2>
-  <form action="reservationform.php" method="post">
-    <div class="form-group ">
-      <label for="email">Username:</label>
-      <input type="text" class="form-control" name="username" placeholder="Enter Username">
-    </div>
-    <div class="form-group ">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" name="password" placeholder="Enter Password">
-    </div>
-	
-    <button type="submit" class="btn btn-success">Login</button><br><br>
-	<input type="checkbox" checked="checked"> Remember me
+<div class="container">
+  <h2>Router Reservation</h2>
+  <form action="regprocess.php" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="email">Hours of Reservation</label>
+      <input type="text" class="form-control" name="username" placeholder="Enter hour (Max 24Hrs)">
+    </div>	 
+    <button type="Register" class="btn btn-success">Reserve</button><br><br>
 	<?php
 error_reporting(0);
  echo $_GET["err"];
@@ -139,13 +105,11 @@ error_reporting(0);
   </form>
 </div>
 
-
     <footer>
                    <div class="container text-center">
 							Copyright &copy; 2020 <a href="index.html">Reservation_Tool</a> &nbsp;| &nbsp;All Rights Reserved
 					</div>
 	               </footer>
-
 
 </body>
 </html>

@@ -40,10 +40,16 @@
 	  height:50%;
       min-height:50px;
   }
-	 footer {
-      background-color:black;
-      padding: 50px;
-    }
+	 
+ footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
   </style>
 </head>
 <body>
@@ -63,19 +69,11 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav mynavhdr1 navbar-nav">
-        <li><a href="#" class="fa fa-twitter" style="color:white"></a></li>
-        <li><a href="#" class="fa fa-facebook" style="color:white"></a></li>
-        <li><a href="#" class="fa fa-google-plus" style="color:white"></a></li>
-        <li><a href="#" class="fa fa-pinterest" style="color:white"></a></li>
-        <li><a href="#" class="fa fa-instagram" style="color:white"></a></li>
-        <li><a href="#" class="fa fa-rss" style="color:white"></a></li>
-       
-      </ul>
-   
+      
       <ul class="nav navbar-nav mynav navbar-right">
+	  <li><a href="index.html"><i class="glyphicon glyphicon-shopping-cart" style="color:red"></i>&nbsp;&nbsp;&nbsp;DESK</a></li>
         <li><a href="index.html"><i class="fa fa-sign-in" style="color:red"></i>&nbsp;&nbsp;&nbsp;LOGIN</a></li>
-		<li><a href="index.html"><i class="glyphicon glyphicon-shopping-cart" style="color:red"></i>&nbsp;&nbsp;&nbsp;CART</a></li>
+		
        
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -87,6 +85,15 @@
   <h2>Rack Router Reservation</h2>
   <table class="table table-bordered table-dark">
   <thead>
+    <?php
+      
+        if(isset($_POST['RESERVED'])) { 
+            <form action="reserve.php" >
+        } 
+        if(isset($_POST['Unreserve'])) { 
+            <form action="reserve.php" >
+        } 
+    ?> 
     <tr>
       <th scope="col">#</th>
       <th scope="col">ROUTER</th>
@@ -109,8 +116,10 @@
 	  <td>vmanga238</td>
 	   <td>10</td>
 	   <td> 2 </td>
-<td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-primary" onclick="add_reserve(event)">Unreserve</button><br><br></td>
-    </tr> 
+	  
+<td><button type="submit" value="RESERVED"class="btn btn-success">Reserve</button><button type="submit" value="Ureserve"class="btn btn-primary" >Unreserve</button><br><br></td>
+  
+   </tr> 
 	<tr>
       <th scope="row">2</th>
       <td>XF3</td>
