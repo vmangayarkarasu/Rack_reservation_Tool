@@ -83,7 +83,7 @@
 </nav>
 </header>
 
-<div class="container">
+<div class="table-responsive-md btn-table">
   <h2>Rack Router Reservation</h2>
   <table class="table table-bordered table-dark">
   <thead>
@@ -91,10 +91,11 @@
       <th scope="col">#</th>
       <th scope="col">ROUTER</th>
       <th scope="col">IP ADDRESS</th>
+	   <th scope="col">MAC ADDRESS</th>
       <th scope="col">RESERVATION STATUS</th>
 	  <th scope="col">USER NAME</th>
 	   <th scope="col">Hr RESERVED</th>
-	   <th scope="col">REMAINING Hr OF RESERVATION</th>
+	   <th scope="col">REMAIN Hr OF RESERV</th>
 	    <th scope="col">RESERVATION OPTION</th>
     </tr>
   </thead>
@@ -103,111 +104,122 @@
       <th scope="row">1</th>
       <td>TXCHXB6</td>
       <td>10.0.0.1</td>
+	  <td>AA.AA.AA.AA.22</td>
       <td>FREE</td>
 	  <td>vmanga238</td>
 	   <td>10</td>
 	   <td> 2 </td>
-<td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-success">Unreserve</button><br><br></td>
+<td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-primary" onclick="add_reserve(event)">Unreserve</button><br><br></td>
     </tr> 
 	<tr>
       <th scope="row">2</th>
       <td>XF3</td>
       <td>10.0.0.1</td>
+	   <td>AA.AA.AA.AA.22</td>
       <td>RESERVED</td>
 	  <td>vmanga238</td>
 	   <td>10</td>
 	   <td> 2 </td>
-	    <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-success">Unreserve</button><br><br></td>
+	    <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-primary">Unreserve</button><br><br></td>
     </tr>
     <tr>
       <th scope="row">3</th>
        <td>XB3</td>
       <td>10.0.0.1</td>
+	   <td>AA.AA.AA.AA.22</td>
       <td>RESERVED</td>
 	  <td>vmanga238</td>
 	   <td>10</td>
 	   <td> 2 </td>
-	  <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-success">Unreserve</button><br><br></td>
+	  <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-primary">Unreserve</button><br><br></td>
     </tr>
 	 <tr>
       <th scope="row">4</th>
        <td>XB3</td>
       <td>10.0.0.1</td>
+	   <td>AA.AA.AA.AA.22</td>
       <td>FREE</td>
 	  <td>vmanga238</td>
 	   <td>10</td>
 	   <td> 2 </td>
-	   <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-success">Unreserve</button><br><br></td>
+	   <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-primary">Unreserve</button><br><br></td>
     </tr>
 	 <tr>
       <th scope="row">4</th>
        <td>XB3</td>
       <td>10.0.0.2</td>
+	   <td>AA.AA.AA.AA.22</td>
       <td>RESERVED</td>
 	  <td>vivek</td>
 	   <td>10</td>
 	   <td> 2 </td>
-	  <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-success">Unreserve</button><br><br></td>
+	  <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-primary">Unreserve</button><br><br></td>
     </tr>
 	 <tr>
       <th scope="row">5</th>
        <td>XB3</td>
       <td>10.0.0.10</td>
+	   <td>AA.AA.AA.AA.22</td>
       <td>FREE</td>
 	  <td>aadhi</td>
 	   <td>10</td>
 	   <td> 2 </td>
-	   <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-success">Unreserve</button><br><br></td>
+	   <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-primary">Unreserve</button><br><br></td>
     </tr>
 	<tr>
       <th scope="row">6</th>
        <td>XB3</td>
       <td>10.0.0.10</td>
+	   <td>AA.AA.AA.AA.22</td>
       <td>FREE</td>
 	  <td>aadhi</td>
 	   <td>10</td>
 	   <td> 2 </td>
-	 <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-success">Unreserve</button><br><br></td>
+	 <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-primary">Unreserve</button><br><br></td>
     </tr>
 	<tr>
       <th scope="row">7</th>
        <td>XB3</td>
       <td>10.0.0.10</td>
+	   <td>AA.AA.AA.AA.22</td>
       <td>FREE</td>
 	  <td>aadhi</td>
 	   <td>10</td>
 	   <td> 2 </td>
-	   <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-success">Unreserve</button><br><br></td>
+	   <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-primary">Unreserve</button><br><br></td>
     </tr>
 	<tr>
       <th scope="row">8</th>
        <td>XB3</td>
       <td>10.0.0.10</td>
+	   <td>AA.AA.AA.AA.22</td>
       <td>FREE</td>
 	  <td>aadhi</td>
 	   <td>10</td>
 	   <td> 2 </td>
-	    <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-success">Unreserve</button><br><br></td>
+	    <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-primary">Unreserve</button><br><br></td>
     </tr>
 	<tr>
       <th scope="row">9</th>
        <td>XB3</td>
       <td>10.0.0.10</td>
+	   <td>AA.AA.AA.AA.22</td>
       <td>FREE</td>
 	  <td>aadhi</td>
 	   <td>10</td>
 	   <td> 2 </td>
-	<td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-success">Unreserve</button><br><br></td>
+	<td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-primary">Unreserve</button><br><br></td>
     </tr>
 	<tr>
       <th scope="row">10</th>
        <td>XB3</td>
       <td>10.0.0.10</td>
+	   <td>AA.AA.AA.AA.22</td>
       <td>FREE</td>
 	  <td>aadhi</td>
 	   <td>10</td>
 	   <td> 2 </td>
-	  <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-success">Unreserve</button><br><br></td>
+	  <td><button type="submit" class="btn btn-success">Reserve</button><button type="submit" class="btn btn-primary">Unreserve</button><br><br></td>
     </tr>
   </tbody>
 </table>
